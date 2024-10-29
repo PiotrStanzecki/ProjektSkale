@@ -5,8 +5,8 @@ notes = ["C","Db","D","Eb","E","F","Gb","G","Ab","A",
 "Bb","B"]
 
 quality = ["maj","min","sus2","sus4","majb5","dim",
-    "maj7","min7","7","maj7#11","min6","7#11","maj7#5","maj69",
-    "dimmaj7","min7b5"]
+"maj7","min7","7","maj7#11","min6","7#11","maj7#5","maj69",
+"dimmaj7","min7b5"]
 
 def randomprog(notes, quality, n):
     prog = ""
@@ -28,6 +28,8 @@ def printProgToPdf(outputName, amount):
     pdf = FPDF()
     pdf.add_page()
     pdf.set_font("Arial", size = 10)
+    pdf.cell(200, 10, txt = "1 Pozycja od 1 progu, 2 Pozycja od 5 progu, 3 Pozycja od 10 progu, 4 Pozycja od 15 progu",
+             ln = 1, align = 'C')
     for i in range(amount):
         pdf.cell(200, 10, txt = randomprog(notes, quality, 10) +
         "Pozycja: " + str(random.randint(1,4)), 
@@ -49,7 +51,8 @@ def printProgToPdf(outputName, amount):
 def main() :
     print(randomprog(notes, quality, 8))
     print("Pozycja: " + str(random.randint(1,4)))
-    printProgToPdf("Chord_Progression.pdf", 25)
+    printProgToPdf("Chord_Progression1.pdf", 300)
+    printProgToPdf("Chord_Progression2.pdf", 300)
 
 
 if __name__ == '__main__':
