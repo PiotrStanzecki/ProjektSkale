@@ -18,7 +18,7 @@ int main()
     "maj7","min7","7","maj7#11","min6","7#11","maj7#5","maj69",
     "dimmaj7","min7b5"};
 
-    cout << randprogression( notes,quality, 4) << endl;
+    cout << randprogression( notes,quality, 12) << endl;
     cout <<"Pozycja: "<< rand()%4 + 1 <<endl;
     //1 pozycja od 1 progu
     //2 pozycja od 5 progu
@@ -38,12 +38,20 @@ string randprogression(string notes[], vector<string> quality, int n)
     string prog = "";
     string randnote;
     string randquality;
-    for(int i = 0; i < n; i++)
+    for(int i = 1; i <= n; i++)
     {
         randnote = notes[rand()%12];
         randquality = quality[rand()%quality.size()];
         
-        prog += randnote + randquality + " ";
+        if(i%4 != 0)
+        {
+            prog += randnote + randquality + " ";
+        }else
+        {
+            prog += randnote + randquality + '\n';
+        }
+        
+        
     }
     return prog;
 }
