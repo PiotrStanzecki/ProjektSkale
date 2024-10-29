@@ -1,4 +1,5 @@
 import random
+from fpdf import FPDF
 
 notes = ["C","Db","D","Eb","E","F","Gb","G","Ab","A",
 "Bb","B"]
@@ -22,6 +23,22 @@ def randomprog(notes, quality, n):
         
     return prog
 
+
+def printProgToPdf(outputName, amount):
+    pdf = FPDF()
+    pdf.add_page()
+    pdf.set_font("Arial", size = 10)
+    for i in range(amount):
+        pdf.cell(200, 10, txt = randomprog(notes, quality, 10) +
+        "Pozycja: " + str(random.randint(1,4)), 
+        ln = 1, align = 'L')
+    pdf.output(outputName)
+
+
+
+
+
+
     
 
 #1 poz. od 1 progu
@@ -32,6 +49,7 @@ def randomprog(notes, quality, n):
 def main() :
     print(randomprog(notes, quality, 8))
     print("Pozycja: " + str(random.randint(1,4)))
+    printProgToPdf("Chord_Progression.pdf", 25)
 
 
 if __name__ == '__main__':
