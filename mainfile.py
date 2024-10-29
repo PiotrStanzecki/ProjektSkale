@@ -22,5 +22,19 @@ def randomprog(notes, quality, n):
         
     return prog
 
-print(randomprog(notes, quality, 8))
-print("Pozycja: " + str(random.randint(1,4)))
+    
+
+#1 poz. od 1 progu
+#2 poz. od 5 progu
+#3 poz. od 10 progu
+#4 poz. od 15 progu
+
+def main() :
+    print(randomprog(notes, quality, 8))
+    print("Pozycja: " + str(random.randint(1,4)))
+
+
+if __name__ == '__main__':
+    main()
+    
+
