@@ -6,7 +6,9 @@ notes = ["C","Db","D","Eb","E","F","Gb","G","Ab","A",
 
 quality = ["maj","min","sus2","sus4","majb5","dim",
 "maj7","min7","7","maj7#11","min6","7#11","maj7#5","maj69",
-"dimmaj7","min7b5"]
+"dimmaj7","min7b5", "7b13", "7#9", "7b9", "7b5", "susb9", "maj7add6",
+"min7add4", "majaddb2", "majadd2", "majadd#2","majadd#4","majadd#5", "maj6",
+"minaddb2", "minadd2", "minadd4", "minaddb6", "minmaj7", "aug"]
 
 def randomprog(notes, quality, n):
     prog = ""
