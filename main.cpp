@@ -19,7 +19,7 @@ int main()
     "dimmaj7","min7b5"};
 
     cout << randprogression( notes,quality, 4) << endl;
-    cout <<"Pozycja: "<< rand()%5 <<endl;
+    cout <<"Pozycja: "<< rand()%4 + 1 <<endl;
     //1 pozycja od 1 progu
     //2 pozycja od 5 progu
     //3 pozycja od 10 progu
