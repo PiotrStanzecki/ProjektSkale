@@ -23,3 +23,4 @@ def randomprog(notes, quality, n):
     return prog
 
 print(randomprog(notes, quality, 8))
+print("Pozycja: " + str(random.randint(1,4)))
